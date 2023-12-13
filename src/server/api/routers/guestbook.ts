@@ -14,7 +14,7 @@ export const guestbookRouter = createTRPCRouter({
                 await ctx.db.guestbook.create({
                     data: {
                         name: input.name,
-                        message: input.name,
+                        message: input.message,
                     },
                 });
             } catch (error) {
