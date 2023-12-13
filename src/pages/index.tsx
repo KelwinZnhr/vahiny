@@ -19,7 +19,7 @@ export default function Home() {
       </Head>
       <main className="flex flex-col items-center">
         <h1 className="text-3xl pt-4">Vahiny</h1>
-        <p>made with <code>create-t3-app</code></p>
+        <p>don't forget <code>be kind</code></p>
         <div className="pt-10 text-center">
           <div>
             {session ? (
@@ -34,7 +34,9 @@ export default function Home() {
                     }}>Logout</button>
                   
                 </div>
-                <GuestbookEntries />
+                <div className="pt-10">
+                  <GuestbookEntries />
+                </div>
               </>
               ) : (
               <>
