@@ -20,27 +20,32 @@ export default function Home() {
       <main className="flex flex-col items-center">
         <h1 className="text-3xl pt-4">Vahiny</h1>
         <p>made with <code>create-t3-app</code></p>
-        <div className="pt-10">
+        <div className="pt-10 text-center">
           <div>
             {session ? (
               <>
-                <p className="mb-4 text-center">Hi {session.user?.name}</p>
-                <button
-                  type="button"
-                  className="bg-red-500 p-2 rounded-lg"
-                  onClick={() => {
-                    signOut().catch(console.log);
-                  }}>Logout</button>
-                <GuestbookEntries/>
+                <div className="place-items-start">
+                  <p className="mb-4 text-center">Hi {session.user?.name}</p>
+                  <button
+                    
+                    className="bg-red-500 p-2 rounded-lg"
+                    onClick={() => {
+                      signOut().catch(console.log);
+                    }}>Logout</button>
+                  
+                </div>
+                <GuestbookEntries />
               </>
               ) : (
               <>
-                <p className="mb-4 text-center">You are not logged in</p>
-                <button
-                  className="bg-purple-600 p-2 rounded-lg"
-                  onClick={() => {
-                    signIn("discord").catch(console.log);
-                  }}>Log in with Discord</button>
+                <div className="place-items-center">
+                  <p className="mb-4 text-center">Log in to sign on my guestbook 😜</p>
+                  <button
+                    className="bg-purple-600 p-2 rounded-lg"
+                    onClick={() => {
+                      signIn("discord").catch(console.log);
+                    }}>Log in with Discord</button>
+                </div>
               </>
             )}
           </div>
