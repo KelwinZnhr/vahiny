@@ -69,7 +69,7 @@ const GuestbookEntries = () => {
     <div className="text-start">
       <p className="text-xl underline mb-2">Messages from all the guests :</p>
       {guestbookEntries?.map((entry, index) => {
-        return <div key={index}><p>{entry.message} <span>- {entry.name}</span> </p></div>
+        return <div key={index}><p><span className="italic text-slate-400">{entry.name} - </span>{entry.message}</p></div>
       })}
     </div>
   )
