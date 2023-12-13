@@ -67,7 +67,7 @@ const GuestbookEntries = () => {
   if (isLoading) return <div>Fetching messages</div>;
   return (
     <div className="text-start">
-      <p className="text-xl underline mb-2">Messages from all the guest :</p>
+      <p className="text-xl underline mb-2">Messages from all the guests :</p>
       {guestbookEntries?.map((entry, index) => {
         return <div key={index}><p>{entry.message} <span>- {entry.name}</span> </p></div>
       })}
