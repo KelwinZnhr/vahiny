@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className="flex flex-col items-center">
         <h1 className="text-3xl pt-4">Vahiny</h1>
-        <p>don't forget to<code>be kind🍃</code></p>
+        <p>don't forget to <code>be kind🍃</code></p>
         <div className="pt-10 text-center">
           <div>
             {session ? (
