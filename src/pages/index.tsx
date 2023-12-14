@@ -79,7 +79,7 @@ const Form = ()=>{
   const [message, setMessage] = useState("");
   const { data: session, status} = useSession();
 
-  const utils = api.useContext();
+  const utils = api.useUtils() ;
   const postMessage = api.guestbook.postMessage.useMutation({
     onMutate: async (newEntry)=>{
       await utils.guestbook.getAll.cancel();
